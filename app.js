@@ -7,6 +7,8 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 
+app.use(cors());
+
 app.set("server.timeout", 300000);
 
 app.get("/", (req, res) => {
@@ -29,7 +31,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-app.use(cors());
+
 
 // File conversion endpoint
 app.post("/convert", upload.single("file"), (req, res) => {
