@@ -10,7 +10,7 @@ const port = 3000;
 app.set("server.timeout", 300000);
 
 app.get("/", (req, res) => {
-  res.send("hi");
+  res.send("Hi");
 });
 
 // Ensure the 'uploads' directory exists
